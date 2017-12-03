@@ -1,0 +1,14 @@
+websolutio_demo_start:
+    pattern: /
+    defaults: { _controller:  WebsolutioDemoBundle:Main:start }
+    
+websolutio_demo_default:
+    pattern: /{_locale}
+    defaults: { _controller:  WebsolutioDemoBundle:Programmes:index , _locale: %locale% }
+    
+websolutio_demo_homepage:
+    path:     /{_locale}
+    defaults: { _controller: WebsolutioDemoBundle:Programmes:index }
+    requirements:
+        _locale: en|pl|cz|ro
+
